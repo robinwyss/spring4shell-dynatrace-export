@@ -156,7 +156,7 @@ with open('spring4shellexport.csv', 'w', newline='') as f:
             if tomcatVersion:
                 tomcatMajor = tomcatVersion.split('.')[0]
 
-            if not filter or (javaMajor is not None and int(javaMajor) >= 9) and (tomcatVersion is not None and int(tomcatMajor) >= 9) :
+            if not filter or (javaMajor is not None and int(javaMajor) >= 9) and (tomcatVersion is not None) :
                 writer.writerow([process['displayName'],
                     process['entityId'],
                     javaVersion,
