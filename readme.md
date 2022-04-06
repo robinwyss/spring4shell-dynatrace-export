@@ -18,9 +18,9 @@ This is a simple python script that exports all processes that have been found t
 ```bash
 python3 spring4shell-export.py -e https://xxxyyyyy.live.dynatrace.com -t dt0c01.XXX... 
 ```
-Or to export only processes with Java 9+ and Tomcat 9+
+Or to export only processes with Java 9+ and Tomcat
 ```bash
-python3 export_vulnerabilities.py -e https://xxxyyyyy.live.dynatrace.com -t dt0c01.XXX... -d
+python3 spring4shell-export.py -e https://xxxyyyyy.live.dynatrace.com -t dt0c01.XXX... -f
 ```
 
 ## Logging
