@@ -119,7 +119,7 @@ class DynatraceApi:
             yield lst[i:i + n]
 
 
-def getTechnologieVersion(process, technolotyType):
+def getTechnologyVersion(process, technologyType):
     """
     Gets the technology information from a process
     param: dictionary entity: the process entity from which the information should be retrieved
@@ -127,7 +127,7 @@ def getTechnologieVersion(process, technolotyType):
     """
     softwareTechnologies = process['properties']['softwareTechnologies']
     for technology in softwareTechnologies:
-        if technology['type'] == technolotyType and 'version' in technology:
+        if technology['type'] == technologyType and 'version' in technology:
             return technology['version']
 
 
@@ -149,10 +149,10 @@ with open('spring4shellexport.csv', 'w', newline='') as f:
         securityProblemDetail = dynatraceApi.getSecurityProblemDetails(secP["securityProblemId"])
         processes = dynatraceApi.getProcesses(securityProblemDetail['affectedEntities'])
         for process in processes:
-            javaVersion = getTechnologieVersion(process, 'JAVA')
+            javaVersion = getTechnologyVersion(process, 'JAVA')
             if javaVersion:
                 javaMajor = javaVersion.split('.')[0]
-            tomcatVersion = getTechnologieVersion(process, 'APACHE_TOMCAT')
+            tomcatVersion = getTechnologyVersion(process, 'APACHE_TOMCAT')
             if tomcatVersion:
                 tomcatMajor = tomcatVersion.split('.')[0]
 
