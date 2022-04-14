@@ -1,7 +1,7 @@
 # Dynatrace spring4shell exporter
 This is a simple python script that exports all processes that have been found to have the spring4shell (CVE-2022-22965) vulnerability via the Dynatrace API. The result is stored in a CSV file
 
-## Prerequisits
+## Prerequisites
 - Python 3
 - [requests](https://pypi.org/project/requests/) libraries
   - pip install requests
