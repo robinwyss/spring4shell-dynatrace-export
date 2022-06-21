@@ -87,7 +87,7 @@ class DynatraceApi:
     
     def getProcesses(self, processeIDs):
         """
-        Retrieves the details of the specfied processes, with thechnolgy details and the relations to software components
+        Retrieves the details of the specified processes, with technology details and the relations to software components
         :param list of entity references (dic) (e.g. [{'id': ...}])
         :return list of entities (dictionary)
         """
